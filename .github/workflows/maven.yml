@@ -34,7 +34,7 @@ jobs:
       run: docker images
       
     - name: Pushing the image on DockerHub
-      run: docker push pramodhm112/maven-deploy-example/addressbook:0.1
+      run: docker push ghcr.io/pramodhm112/maven-deploy-example/addressbook:0.1
         
 #   sonar:
 #     name: Test - SonarCloud Scan
