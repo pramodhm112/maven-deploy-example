@@ -28,7 +28,11 @@ jobs:
       run: docker build . --file Dockerfile --tag pramodhm112/maven-deploy-example/addressbook:0.1
       
     - name: Docker credentials
-      run: docker login ghcr.io --username pramodhm112 --password ${{secrets.DOCKER_AUTH}} 
+      run: docker login ghcr.io --username pramodhm112 --password ${{secrets.DOCKER_AUTH}}
+      
+    - name: Docker Images
+      run: docker images
+      
     - name: Pushing the image on DockerHub
       run: docker push pramodhm112/maven-deploy-example/addressbook:0.1
         
