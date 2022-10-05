@@ -23,7 +23,7 @@ jobs:
     - name: Build with Maven
       run: mvn package
     - name: Copy war file
-      run: cp /home/runner/work/DevOps-Demo/DevOps-Demo/target/addressbook.war .
+      run: cp /home/runner/work/maven-deploy-example/maven-deploy-example/target/addressbook.war .
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag 8884691005/devopsdemo:0.1
       
