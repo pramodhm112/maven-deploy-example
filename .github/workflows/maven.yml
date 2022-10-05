@@ -27,10 +27,10 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag 8884691005/devopsdemo:0.1
       
-#     - name: Docker credentials
-#       run: docker login --username 8884691005 --password ${{secrets.DOCKERHUB_AUTH}} 
-#     - name: Pushing the image on DockerHub
-#       run: docker push 8884691005/devopsdemo:0.1
+    - name: Docker credentials
+      run: docker login ghcr.io --username pramodhm112 --password ${{secrets.DOCKER_AUTH}} 
+    - name: Pushing the image on DockerHub
+      run: docker push pramodhm112/maven-deploy-example/addressbook:0.1
         
 #   sonar:
 #     name: Test - SonarCloud Scan
